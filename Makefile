@@ -1,9 +1,9 @@
-NAME =			scw-image-builder
+NAME =			image-builder
 VERSION =		latest
 VERSION_ALIASES = 	1.4.0 1.4 1
 TITLE =			image-builder
 DESCRIPTION =		An image to build other images
-SOURCE_URL =		https://github.com/scaleway/image-tools/tree/master/image-builder
+SOURCE_URL =		https://github.com/scaleway/image-builder
 
 
 IMAGE_VOLUME_SIZE =	150G
