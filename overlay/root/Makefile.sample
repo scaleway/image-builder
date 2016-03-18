@@ -1,8 +1,8 @@
-NAME =                  APP_NAME
+NAME =                  my-image
 VERSION =               latest
 VERSION_ALIASES =       1.2.3 1.2 1
-TITLE =                 APP_TITLE
-DESCRIPTION =           APP_DESCRIPTION
+TITLE =                 My image
+DESCRIPTION =           My image with Ubuntu and MySQL
 DOC_URL =
 SOURCE_URL =            https://github.com/scaleway-community/...
 VENDOR_URL =
@@ -11,7 +11,7 @@ DEFAULT_IMAGE_ARCH =	x86_64
 
 IMAGE_VOLUME_SIZE =     50G
 IMAGE_BOOTSCRIPT =      stable
-IMAGE_NAME =            APP_IMAGE_NAME
+IMAGE_NAME =            My image
 
 ## Image tools  (https://github.com/scaleway/image-tools)
 all:	docker-rules.mk

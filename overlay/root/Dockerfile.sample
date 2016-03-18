@@ -1,10 +1,10 @@
-FROM scaleway/ubuntu:amd64-vivid
+FROM scaleway/ubuntu:amd64-wily
 # following 'FROM' lines are used dynamically thanks do the image-builder
 # which dynamically update the Dockerfile if needed.
-#FROM scaleway/ubuntu:armhf-vivid       # arch=armv7l
-#FROM scaleway/ubuntu:arm64-vivid       # arch=arm64
-#FROM scaleway/ubuntu:i386-vivid        # arch=i386
-#FROM scaleway/ubuntu:mips-vivid        # arch=mips
+#FROM scaleway/ubuntu:armhf-wily       # arch=armv7l
+#FROM scaleway/ubuntu:arm64-wily       # arch=arm64
+#FROM scaleway/ubuntu:i386-wily        # arch=i386
+#FROM scaleway/ubuntu:mips-wily        # arch=mips
 
 # Prepare rootfs
 RUN /usr/local/sbin/scw-builder-enter
