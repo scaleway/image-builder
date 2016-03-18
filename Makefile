@@ -7,7 +7,7 @@ SOURCE_URL =		https://github.com/scaleway/image-tools/tree/master/image-builder
 
 
 IMAGE_VOLUME_SIZE =	150G
-IMAGE_BOOTSCRIPT =	docker \#3
+IMAGE_BOOTSCRIPT =	docker
 IMAGE_NAME =		Image Builder 1.4
 
 DEFAULT_IMAGE_ARCH = x86_64
