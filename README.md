@@ -19,7 +19,7 @@ We use the Docker's building system and convert it at the end to a disk image th
 ## How to build a custom image using [scw](https://github.com/scaleway/scaleway-cli)
 
 **My custom image's description**
-- based on the official [Ubuntu Vivid](https://github.com/scaleway/image-ubuntu)
+- based on the official [Ubuntu Wily](https://github.com/scaleway/image-ubuntu)
 - with `cowsay` pre-installed
 
 ---
@@ -52,22 +52,22 @@ root@yourmachine> scw run --name="buildcowsay" image-builder
 root@buildcowsay:~# image-builder-configure
 Login (cloud.scaleway.com):                     # yourmail
 Password:                                       # yourpassword
-root@buildcowsay:~# mkdir vivid-cowsay
-root@buildcowsay:~# cp Makefile.sample vivid-cowsay/Makefile
-root@buildcowsay:~# cp Dockerfile.sample vivid-cowsay/Dockerfile
-root@buildcowsay:~# cd vivid-cowsay
-root@buildcowsay:~/vivid-cowsay# ls -l
+root@buildcowsay:~# mkdir cowsay
+root@buildcowsay:~# cp Makefile.sample cowsay/Makefile
+root@buildcowsay:~# cp Dockerfile.sample cowsay/Dockerfile
+root@buildcowsay:~# cd cowsay
+root@buildcowsay:~/cowsay# ls -l
 total 4
--rw-r--r-- 1 root root   0 Aug 28 15:35 Dockerfile
--rw-r--r-- 1 root root 146 Aug 28 15:19 Makefile
+-rw-r--r-- 1 root root  562 Mar 18 10:37 Dockerfile
+-rw-r--r-- 1 root root  556 Mar 18 10:38 Makefile
 ```
 ##### 2. Configuring your Makefile
 ```console
-NAME =                  vivid-cowsay
+NAME =                  cowsay
 VERSION =               latest
 VERSION_ALIASES =       1.2.3 1.2 1
-TITLE =                 vivid-cowsay
-DESCRIPTION =           ubuntu-vivid with cowsay pre-installed
+TITLE =                 wily-cowsay
+DESCRIPTION =           wily with cowsay pre-installed
 DOC_URL =
 SOURCE_URL =            https://github.com/scaleway-community/...
 VENDOR_URL =
@@ -76,7 +76,7 @@ DEFAULT_IMAGE_ARCH =	x86_64
 
 IMAGE_VOLUME_SIZE =     50G
 IMAGE_BOOTSCRIPT =      stable
-IMAGE_NAME =            vivid-with-cowsay
+IMAGE_NAME =            cowsay
 
 ## Image tools  (https://github.com/scaleway/image-tools)
 all:	docker-rules.mk
@@ -93,13 +93,13 @@ docker-rules.mk:
 > These lines are used by Makefile to handle the multiarch
 
 ```dockerfile
-FROM scaleway/ubuntu:amd64-vivid
+FROM scaleway/ubuntu:amd64-wily
 # following 'FROM' lines are used dynamically thanks do the image-builder
 # which dynamically update the Dockerfile if needed.
-#FROM scaleway/ubuntu:armhf-vivid       # arch=armv7l
-#FROM scaleway/ubuntu:arm64-vivid       # arch=arm64
-#FROM scaleway/ubuntu:i386-vivid        # arch=i386
-#FROM scaleway/ubuntu:mips-vivid        # arch=mips
+#FROM scaleway/ubuntu:armhf-wily       # arch=armv7l
+#FROM scaleway/ubuntu:arm64-wily       # arch=arm64
+#FROM scaleway/ubuntu:i386-wily        # arch=i386
+#FROM scaleway/ubuntu:mips-wily        # arch=mips
 
 # Prepare rootfs
 RUN /usr/local/sbin/scw-builder-enter
@@ -117,8 +117,8 @@ You can see other Dockerfiles [here](https://github.com/scaleway/image-tools#off
 ```console
 root@buildcowsay> make image_on_local
 ...
-[+] URL of the tarball: http://YOUR_IP:8000/x86_64-vivi-cowsay-latest/x86_64-vivi-cowsay-latest.tar
-[+] Target name: x86_64-vivi-cowsay-latest.tar
+[+] URL of the tarball: http://YOUR_IP:8000/x86_64-cowsay-latest/x86_64-cowsay-latest.tar
+[+] Target name: x86_64-cowsay-latest.tar
 [+] Creating new server in rescue mode with a secondary volume...
 [+] Server created: 3e801785-4e62-425f-bb5a-04eac555ff79
 [+] Booting...
@@ -154,7 +154,7 @@ Your custom image is now available [here](https://cloud.scaleway.com/#/images)
 
 ##### 4. Running your custom image
 ```console
-root@buildcowsay:~/vivid-cowsay# scw run --tmp-ssh-key --name="my-vivid-with-cowsay"  IMAGE_ID
+root@buildcowsay:~/cowsay# scw run --tmp-ssh-key --name="cowsay-app"  IMAGE_ID
                _
  ___  ___ __ _| | _____      ____ _ _   _
 / __|/ __/ _` | |/ _ \ \ /\ / / _` | | | |
@@ -163,9 +163,9 @@ root@buildcowsay:~/vivid-cowsay# scw run --tmp-ssh-key --name="my-vivid-with-cow
                                     |___/
 ...
 
-root@my-vivid-with-cowsay:~# cowsay "Hello from my custom vivid"
+root@cowsay-app:~# cowsay "Hello from my app"
  ____________________________
-< Hello from my custom vivid >
+< Hello from my app >
  ----------------------------
         \   ^__^
          \  (oo)\_______
@@ -188,7 +188,7 @@ ARCH=armv7l make image_on_local
 Or run image-builder with C1
 
 ```console
-root@yourmachine> scw run --name="buildcowsay" --commercial-type=C1 image-builder
+root@yourmachine> scw run --name="arm-builder" --commercial-type=C1 image-builder
 ```
 
 
