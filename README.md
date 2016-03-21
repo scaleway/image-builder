@@ -198,6 +198,10 @@ root@yourmachine> scw run --name="arm-builder" --commercial-type=C1 image-builde
 
 ## Changelog
 
+### master (unreleased)
+
+* No entry
+
 ### 1.4.0 (2015-03-21)
 * Multiarch documentation
 * Bump scw to 1.8.0
