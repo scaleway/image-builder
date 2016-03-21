@@ -198,7 +198,7 @@ root@yourmachine> scw run --name="arm-builder" --commercial-type=C1 image-builde
 
 ## Changelog
 
-### Unreleased
+### 1.4.0 (2015-03-21)
 * Multiarch documentation
 * Bump scw to 1.8.0
 * Improved image-builder-configure (now he don't ask for login/password is ~/.scwrc already exist)
