@@ -232,6 +232,10 @@ This initial version contains:
 * Added ssh key
 * Added script to preconfigure your environment
 
+
+## Links
+- [Maartje Eyskens: Multiarch Docker images](https://eyskens.me/multiarch-docker-images/)
+
 ---
 
 A project by [![Scaleway](https://avatars1.githubusercontent.com/u/5185491?v=3&s=42)](https://www.scaleway.com/)
