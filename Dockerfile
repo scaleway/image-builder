@@ -24,7 +24,7 @@ RUN apt-get -qq update     \
  && apt-get clean
 
 # Download scw
-ENV SCW_VERSION 1.8.0
+ENV SCW_VERSION 1.8.1
 
 RUN case "${ARCH}" in                                                                                                               \
 	armv7l|armhf|arm)                                                                                                               \
