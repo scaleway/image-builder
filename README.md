@@ -1,6 +1,8 @@
-# Official Image Builder on Scaleway
+# Build your server images on Scaleway
 
-[![Run on Scaleway](https://img.shields.io/badge/Scaleway-run-69b4ff.svg)](http://cloud.scaleway.com/#/servers/new?image=49eb4659-44a2-4d9c-bcc4-142185379e6e)
+[![Build Status](https://travis-ci.org/scaleway/image-builder.svg?branch=master)](https://travis-ci.org/scaleway/image-builder)
+[![Scaleway ImageHub](https://img.shields.io/badge/ImageHub-view-ff69b4.svg)](https://www.scaleway.com/imagehub/image-builder/)
+[![Run on Scaleway](https://img.shields.io/badge/Scaleway-run-69b4ff.svg)](http://cloud.scaleway.com/#/servers/new?image=67597b1e-89f7-4fb3-98e2-6e199ca60adb)
 
 Scripts to build the official Image Builder on Scaleway
 
