@@ -200,6 +200,7 @@ root@yourmachine> scw run --name="arm-builder" --commercial-type=C1 image-builde
 
 ### 1.4.1 (unreleased)
 
+* Use 50GB instead of 150GB
 * Bump scw @1.8.1
 
 ### 1.4.0 (2015-03-21)
