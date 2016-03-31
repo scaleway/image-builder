@@ -6,7 +6,7 @@ DESCRIPTION =		An image to build other images
 SOURCE_URL =		https://github.com/scaleway/image-builder
 
 
-IMAGE_VOLUME_SIZE =	150G
+IMAGE_VOLUME_SIZE =	50G
 IMAGE_BOOTSCRIPT =	docker
 IMAGE_NAME =		Image Builder 1.4.1
 
