@@ -200,12 +200,16 @@ root@yourmachine> scw run --name="arm-builder" --commercial-type=C1 image-builde
 
 ## Changelog
 
-### 1.4.1 (unreleased)
+### 1.4.2 (unreleased)
+
+* Bump scw @1.9.0
+
+### 1.4.1 (2016-03-30)
 
 * Use 50GB instead of 150GB
 * Bump scw @1.8.1
 
-### 1.4.0 (2015-03-21)
+### 1.4.0 (2016-03-21)
 * Multiarch documentation
 * Bump scw to 1.8.0
 * Improved image-builder-configure (now he don't ask for login/password is ~/.scwrc already exist)
