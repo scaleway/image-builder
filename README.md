@@ -200,7 +200,11 @@ root@yourmachine> scw run --name="arm-builder" --commercial-type=C1 image-builde
 
 ## Changelog
 
-### 1.4.2 (unreleased)
+### 1.4.3 (unreleased)
+
+* No entry
+
+### 1.4.2 (2016-04-04)
 
 * Bump scw @1.9.0
 
