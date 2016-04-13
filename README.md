@@ -249,4 +249,14 @@ This initial version contains:
 
 ---
 
+#### A note about the Makefile system
+
+All our images are using a simple Makefile containing only variables and including the [docker-rules.mk](https://github.com/scaleway/image-tools/blob/master/builder/docker-rules.mk) file that is downloaded on the first run.
+
+The `docker-rules.mk` script is [regularly updated](https://github.com/scaleway/image-tools/commits/master/builder/docker-rules.mk), so it is more convenient to keep downloading a fresh copy regularly.
+
+We are using a `curl ... | bash` install method which can be considered as unsafe. But this command is only used in the build step of the image, as soon as you start a Scaleway server, this command won't be run.
+
+---
+
 A project by [![Scaleway](https://avatars1.githubusercontent.com/u/5185491?v=3&s=42)](https://www.scaleway.com/)
