@@ -194,6 +194,13 @@ root@yourmachine> scw run --name="arm-builder" --commercial-type=C1 image-builde
 ```
 
 
+---
+
+## Distribution
+
+You can contact @moul @QuentinPerez on `irc.online.net`
+
+---
 ## Know issues
 
 - if you have an error when you try to connect on your Scaleway account, remove `~/.scwrc` and retry
