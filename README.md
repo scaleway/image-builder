@@ -207,7 +207,7 @@ You can contact @moul @QuentinPerez on `irc.online.net`
 
 ## Changelog
 
-### 1.4.3 (unreleased)
+### 1.4.3 (2016-10-24)
 
 * Bump scw @1.10.1
 
