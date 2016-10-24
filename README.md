@@ -209,7 +209,7 @@ You can contact @moul @QuentinPerez on `irc.online.net`
 
 ### 1.4.3 (unreleased)
 
-* No entry
+* Bump scw @1.10.1
 
 ### 1.4.2 (2016-04-04)
 
