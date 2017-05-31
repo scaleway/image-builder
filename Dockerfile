@@ -24,7 +24,7 @@ RUN apt-get -qq update     \
  && apt-get clean
 
 # Download scw
-ENV SCW_VERSION 1.10.1
+ENV SCW_VERSION 1.13
 
 RUN case "${ARCH}" in                                                                                                               \
 	armv7l|armhf|arm)                                                                                                               \
@@ -32,6 +32,9 @@ RUN case "${ARCH}" in                                                           
       ;;                                                                                                                            \
     amd64|x86_64|i386)                                                                                                              \
         curl -L https://github.com/scaleway/scaleway-cli/releases/download/v${SCW_VERSION}/scw_${SCW_VERSION}_amd64.deb  > scw.deb  \
+      ;;                                                                                                                            \
+    arm64|aarch64)                                                                                                                  \
+        curl -L https://github.com/scaleway/scaleway-cli/releases/download/v${SCW_VERSION}/scw_${SCW_VERSION}_arm64.deb  > scw.deb  \
       ;;                                                                                                                            \
     *)                                                                                                                              \
       echo "Unhandled architecture: ${ARCH}."; exit 1;                                                                              \
