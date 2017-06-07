@@ -28,18 +28,22 @@ ENV SCW_VERSION 1.13
 
 RUN case "${ARCH}" in                                                                                                               \
 	armv7l|armhf|arm)                                                                                                               \
-		curl -L https://github.com/scaleway/scaleway-cli/releases/download/v${SCW_VERSION}/scw_${SCW_VERSION}_armhf.deb  > scw.deb  \
+        scw_arch=arm                                                                                                                \
       ;;                                                                                                                            \
     amd64|x86_64|i386)                                                                                                              \
-        curl -L https://github.com/scaleway/scaleway-cli/releases/download/v${SCW_VERSION}/scw_${SCW_VERSION}_amd64.deb  > scw.deb  \
+        scw_arch=amd64                                                                                                              \
+      ;;                                                                                                                            \
+    i386)                                                                                                                           \
+        scw_arch=i386                                                                                                               \
       ;;                                                                                                                            \
     arm64|aarch64)                                                                                                                  \
-        curl -L https://github.com/scaleway/scaleway-cli/releases/download/v${SCW_VERSION}/scw_${SCW_VERSION}_arm64.deb  > scw.deb  \
+        scw_arch=arm64                                                                                                              \
       ;;                                                                                                                            \
     *)                                                                                                                              \
       echo "Unhandled architecture: ${ARCH}."; exit 1;                                                                              \
       ;;                                                                                                                            \
-    esac
+    esac;                                                                                                                           \
+    curl -L https://github.com/scaleway/scaleway-cli/releases/download/v${SCW_VERSION}/scw_${SCW_VERSION}_${scw_arch}.deb  >scw.deb
 
 RUN dpkg -i scw.deb \
  && rm scw.deb
