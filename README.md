@@ -198,7 +198,7 @@ root@yourmachine> scw run --name="arm-builder" --commercial-type=C1 image-builde
 
 ## Distribution
 
-You can contact @moul @QuentinPerez on `irc.online.net`
+You can contact the admins of #scaleway on `irc.online.net`.
 
 ---
 ## Know issues
