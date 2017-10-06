@@ -207,6 +207,10 @@ You can contact the admins of #scaleway on `irc.online.net`.
 
 ## Changelog
 
+### 1.4.4 (unreleased)
+
+* Bump scw @1.14
+
 ### 1.4.3 (2016-10-24)
 
 * Bump scw @1.10.1
