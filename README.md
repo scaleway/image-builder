@@ -20,6 +20,11 @@ When you are satisfied build and release your image:
 make IMAGE_DIR=/src/image-foobar/ scaleway_image
 ```
 
+If you want to specify an architecture different from your host one use:
+```
+make ARCH=arm64 IMAGE_DIR=/src/image-foobar/ scaleway_image
+```
+
 For a full documentation on how to build your own images, read the
 [https://github.com/scaleway/image-tools](image-tools) page.
 
