@@ -1,0 +1,13 @@
+[Unit]
+Description=Download Scaleway image-tools
+ConditionPathExists=!/src/image_tools/
+Requires=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/update_image_tools.sh
+
+[Install]
+WantedBy=multi-user.target
